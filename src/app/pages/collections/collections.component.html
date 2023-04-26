@@ -1,0 +1,11 @@
+<main>
+  <h1 id="nome_prodotto" class="nome-prodotto title">{{ productTitle | uppercase }}</h1>
+  <div class="container-product">
+    <a *ngFor="let item of gioielli" [routerLink]="['/product', item.id]">
+      <div class="product" (mouseover)="onProductHover(item)">
+        <div style="background-image: url('../../../assets/img/prodotti/{{item.id}} Grande.jpeg'); background-position: center; background-size: cover; height: 280px;"></div>
+        <p class="small">{{ item.nome | uppercase }}</p>
+      </div>
+    </a>
+  </div>
+</main>

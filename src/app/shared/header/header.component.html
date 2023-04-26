@@ -1,0 +1,15 @@
+<header>
+  <img
+    routerLink="/"
+    class="logo"
+    src="../../../assets/img/Logo.svg"
+    alt="Logo"
+  />
+
+  <nav>
+    <li><a routerLink="/">Home</a></li>
+    <li *ngFor="let route of routes">
+      <a [routerLink]="route.path">{{ route.path }}</a>
+    </li>
+  </nav>
+</header>
